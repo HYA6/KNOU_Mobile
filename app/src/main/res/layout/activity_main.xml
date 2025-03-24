@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+[ViewGroup 속성]
+ViewGroup: 다양한 View에 대한 그룹 관리 수행 (계층적 관리 구조, 화면 효율성 증가)
+    -layout_width: 레이아웃 가로 크기 지정 (최대:match_parent, 최소:wrap_parent)
+    -layout_height: 레이아웃 세로 크기 지정 (최대:match_parent, 최소:wrap_parent)
+    -layout_margin: 바깥 여백 (View와 부모 또는 형제 View 사이)
+    -padding: 안쪽 여백 (View와 내용물 사이)
+
+[LinearLayout 속성]
+LinearLayout: 내부 구성요소를 선형적으로 배치하는 ViewGroup
+    -orientation: 내부에 포함된 View들을 배치하는 방향을 지정 (vertical, horizontal) - TextView에는 적용X
+    -baselineAligned: 수평으로 높이가 다른 다수의 TextView를 아래쪽을 기준으로 정렬함 - horizontal에서만 적용
+    -gravity: 내용물의 정렬 방식 결정
+              (center: 수평, fill: 수직, "|"로 두 속성 묶어서 지정)
+    -layout_weight: 상위 레이아웃의 영역에서 내부 레이아웃이나 위젯의 영역 할당 비율을 지정
+                    (0: 원래 크기로 차지, 1 이상: 크기에 비례하여 차지)
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--layout_width, layout_height-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:padding="20pt"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:padding="20pt"/>
+
+    <!--layout_margin, padding-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF6C"
+        android:text="Top TextView"
+        android:textSize="10pt"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00D8ff"
+        android:layout_margin="20px"
+        android:padding="15dip">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUTTON"
+            android:typeface="serif"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bottom TextView"
+        android:textSize="10pt"
+        android:background="#FFFF6C"/>
+
+    <!--baselineAligned-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baseline"
+            android:textSize="3pt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aligned"
+            android:textSize="10pt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baseline"
+            android:textSize="20pt"/>
+    </LinearLayout>
+
+    <!--gravity-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gravity Test1!!"
+        android:textSize="10pt"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gravity Test2!!"
+        android:textSize="10pt"
+        android:gravity="center_vertical|right"/>
+
+    <!--layout_weight(수로 중요도 나눠짐)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Top Text!!(1)"
+            android:textSize="10pt"
+            android:gravity="center"
+            android:background="#FFE400"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Center Text!!(3)"
+            android:textSize="10pt"
+            android:gravity="center"
+            android:background="#CEF279"
+            android:layout_weight="3"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Bottom Text!!(2)"
+            android:textSize="10pt"
+            android:gravity="center"
+            android:background="#5CD1E5"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+</LinearLayout>
