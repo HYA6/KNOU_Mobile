@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--
+    [Button 속성]
+    Button: 사용자로부터 선택 이벤트를 수집할 수 있는 인터페이스를 제공하는 위젯
+        -text: Button 내부에 출력되는 문자열 지정
+        -textAllCaps: Button 내부에 출력되는 문자열을 모두 대문자로 출력할지 결정 (true, false)
+        -onClick: 버튼의 클릭 이벤트가 발생할 때 수행되는 동작을 연결하기 위한 속성
+                  (MainActivity.java의 MainActivity 클래스 내부에 정의)
+    -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textAllCaps="false"
+        android:onClick="onButtonClick"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="world"
+        android:textAllCaps="false"
+        android:onClick="onButtonClick"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <!--
+    [EditText 속성]
+    EditText: 사용자로부터 문자열을 입력받을 수 있는 인터페이스를 제공하는 위젯
+        -text: 기본으로 출력할 문자열 지정
+        -getText: 사용자가 입력한 문자열을 받아옴 (받아온 Editable 객체를 toString 메소드로 문자열로 변환)
+    -->
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input Please"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button"
+        android:onClick="onButtonClick"/>
+
+
+    <!--
+    [CheckBox 속성]
+    CheckBox: 문자열 리스트에서 다수의 구성요소를 선택하기 위한 인터페이스
+        -isChecked: 체크 여부 확인 (체크된 경우 true, 체크되지 않은 경우 false 반환)
+    -->
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="apple"/>
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="banana"/>
+    <CheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="orange"/>
+
+
+    <!--
+    [RadioButton 속성]
+    RadioButton: 문자열 리스트에서 하나의 구성요소를 선택하기 위한 인터페이스
+        -isChecked: 체크 여부 확인 (체크된 경우 true, 체크되지 않은 경우 false 반환)
+    -->
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple"/>
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banana"/>
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orange"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <!--
+    [Switch 속성]
+    Switch: 사용자의 선택에 따라 On, Off를 전환하는 토글(toggle) 형태의 인터페이스
+        -isChecked: 체크 여부 확인 (체크된 경우 true, 체크되지 않은 경우 false 반환)
+    -->
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="swtich"
+        android:id="@+id/switch1"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="switch button"
+        android:id="@+id/switch_button"
+        android:onClick="onButtonClick"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="35sp"
+        android:id="@+id/textResult"/>
+
+</LinearLayout>
+
