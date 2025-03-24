@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--
+    [TextView 속성]
+        -text: 출력할 문자열 지정(strings.xml의 id 사용)
+        -textColor: 문자열 색상 지정
+        -textSize: 문자열 폰트 크기 지정(sp: 권장,디바이스 크기에 따라 변경/dp: 해상도에 따라 변경)
+        -textStyle: 문자열 속성 지정(normal, bold, italic) - 2개 이상 사용할 땐 공백없이 "|(\)"로 구분
+        -typeface: 글꼴 모양 지정(normal, sans, serif, monospace)
+        -singleLine: 문자열 길이 조절(true, false-기본값)
+    -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:textColor="#ff405aff"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        android:singleLine="true"
+        android:width="200sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="#ff00ff"
+        android:background="#3355bb"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/android"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:typeface="serif"/>
+
+    <!--
+    [ImageView 속성]
+        -src: 출력할 이미지 지정(필수 속성)
+        -minWidth,minHeight: 이미지의 가로, 세로 크기의 최소값 지정
+        -maxWidth,maxHeight: 이미지의 가로, 세로 크기의 최대값 지정
+        -adjustViewBounds: 이미지 크기에 대한 한계값 지정(종횡비 맞춤을 위해)
+        -cropToPadding: 이미지의 크기가 maxWidth,maxHeight이 결정된 상태에서
+                        안쪽 여백에 따라 이미지의 일정 부분이 잘리는 여부 결정
+                        (true:잘림, false:안잘림-기본값)
+        -scaleType: 사용자가 원본 이미지의 크기를 조정하는 다양한 기준 명시
+                    matrix, fitXY, center, centerCrop
+    -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cat"
+        android:minWidth="100pt"
+        android:minHeight="100pt"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cat"
+        android:maxWidth="50pt"
+        android:maxHeight="50pt"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"/>
+
+    <ImageView
+        android:id="@+id/imageid"
+        android:layout_width="match_parent"
+        android:layout_height="600sp"
+        android:src="@drawable/cat"
+        android:padding="50dp"
+        android:background="#cccccc"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"/>
+
+</LinearLayout>
