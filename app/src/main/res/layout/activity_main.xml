@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <!--
+    [View 속성]
+        -id: 이름 정의
+        -background: 배경 지정 (색상, 사진 등)
+        -rotation: 각도 지정
+        -padding: 안쪽 여백 지정
+        -visibility: 화면 표시 여부 (visible-표시(기본값), invisible-비표시&자리O, gone-비표시&자리X)
+        -focusable: 포커스 가능 여부 (true, false)
+        -alpha: 불투명도
+    -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:text="New Button"
+        android:background="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="30dp"
+        android:alpha="0.5"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="30dp"
+        android:rotation="45"
+        android:padding="50dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:text="focus success"
+        android:focusable="true"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:text="focus fail"
+        android:focusable="false"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
