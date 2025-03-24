@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "03_UI"
+rootProject.name = "03_Widget"
 include(":app")
