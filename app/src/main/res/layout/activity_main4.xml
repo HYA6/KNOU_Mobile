@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+[FrameLayout 속성]
+FrameLayout: 자식 View를 배치하는 규칙이 따로 없고, 모든 자식 View가 FrameLayout의 좌측 상단에 나타나는 레이아웃
+    -foreground: 차일드의 위쪽에 살짝 얹히는 이미지를 지정
+    -foregroundGravity: foreground 이미지의 위치를 결정
+    -measureAllChildren: 레이아웃 크기를 모든 자식 View의 크기에 맞추거나 visibility 속성이 visible로 설정된 자식 View에만 맞출것인지 결정
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flower"/>
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:src="@drawable/seal"/>
+
+</FrameLayout>

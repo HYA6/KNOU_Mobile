@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+[RelativeLayout 속성]
+    1. 기준 View와 상대적 위치 지정
+        -layout_alignLeft: 지정된 View의 왼쪽 변을 맞춤
+        -layout_alignTop: 지정된 View의 위쪽 변을 맞춤
+        -layout_alignRight: 지정된 View의 오른쪽 변을 맞춤
+        -layout_alignBottom: 지정된 View의 아래쪽 변을 맞춤
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10px"
+        android:text="TARGET"
+        android:id="@+id/target"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"
+        android:background="#00D8FF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/target"
+        android:text="LEFT"
+        android:id="@+id/left"
+        android:textSize="20sp"
+        android:background="#1DDB16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/target"
+        android:text="RIGHT"
+        android:id="@+id/right"
+        android:textSize="20sp"
+        android:background="#1DDB16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/target"
+        android:text="TOP"
+        android:textSize="20sp"
+        android:background="#1DDB16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/target"
+        android:text="BOTTOM"
+        android:id="@+id/bottom"
+        android:textSize="20sp"
+        android:background="#1DDB16"/>
+
+</RelativeLayout>
